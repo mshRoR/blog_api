@@ -1,0 +1,11 @@
+<ul uib-pagination
+    total-items="$ctrl.totalItems"
+    ng-model="$ctrl.currentPage"
+    max-size="$ctrl.maxSize"
+    items-per-page="$ctrl.itemsPerPage"
+    ng-change="$ctrl.pageChanged()"
+    class="pagination-sm"
+    boundary-links="true"
+    rotate="false">
+</ul>
+<pre>Page: {{$ctrl.currentPage}} / {{$ctrl.numPages}}</pre>

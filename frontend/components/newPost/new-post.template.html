@@ -1,0 +1,10 @@
+<form name="newPostForm" ng-submit="$ctrl.newPostSubmit()">
+  <label for="title">Title:</label>
+  <input type="text" name="title" ng-model="$ctrl.post.title" /><br><br>
+
+  <label for="description">Description: </label><br>
+  <textarea name="description" rows="8" cols="80" ng-model="$ctrl.post.description"></textarea><br><br>
+
+  <input type="submit" name="newPostSubmit" value="Submit">&nbsp;
+  <button type="button" name="cancelBtn" ui-sref="home">Cancel</button>
+</form>

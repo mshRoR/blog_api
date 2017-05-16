@@ -1,0 +1,15 @@
+.idea
+
+#=============== BACKEND ===============#
+backend/.bundle
+
+# Ignore all logfiles and tempfiles.
+backend/log/*
+backend/tmp/*
+!backend/log/.keep
+!backend/tmp/.keep
+
+# Ignore Byebug command history file.
+backend/.byebug_history
+
+#=============== FRONTEND ===============#

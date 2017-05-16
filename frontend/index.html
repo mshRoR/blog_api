@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="blogApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Blog</title>
+    <link href="contents/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="contents/styles.css">
+    <script src="contents/angular.min.js" charset="utf-8"></script>
+    <script src="contents/angular-ui-router.min.js" charset="utf-8"></script>
+    <script src="contents/angular-animate.min.js" charset="utf-8"></script>
+    <script src="contents/ui-bootstrap-tpls-2.5.0.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>Sample Blog Application</h1>
+    <ui-view></ui-view>
+
+    <script src="components/main.js" charset="utf-8"></script>
+    <script src="components/home/home.component.js" charset="utf-8"></script>
+    <script src="components/home/posts.factory.js" charset="utf-8"></script>
+    <script src="components/home/posts.service.js" charset="utf-8"></script>
+    <script src="components/postDetails/post-details.component.js" charset="utf-8"></script>
+    <script src="components/postUpdate/post-update.component.js" charset="utf-8"></script>
+    <script src="components/newPost/new-post.component.js" charset="utf-8"></script>
+    <script src="components/modal/modal.component.js" charset="utf-8"></script>
+    <!-- <script src="components/pagination/pagination.component.js" charset="utf-8"></script> -->
+  </body>
+</html>

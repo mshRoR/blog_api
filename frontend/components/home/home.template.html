@@ -1,0 +1,38 @@
+<button type="button" name="newPost" ui-sref="newPost">New Post</button>
+<span>{{$ctrl.posts.length}}</span>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="post in $ctrl.posts">
+      <td>{{post.id}}</td>
+      <td>{{post.title}}</td>
+      <td>{{post.description}}</td>
+      <td>
+        <button type="button" class="btn btn-sm btn-info" ui-sref="postDetails({id: post.id})">Details</button>
+        <button type="button" class="btn btn-sm btn-primary" ui-sref="postUpdate({id: post.id})">Edit</button>
+        <button type="button" class="btn btn-sm btn-danger" ng-click="$ctrl.deletePost(post.id, post.title)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- <pagination page-info="$ctrl.details"></pagination> -->
+<!-- total_pages: 3, total_objects: 30, current_page: 1, prev_page: null, next_page: 2 -->
+<!-- {{$ctrl.details }} - {{$ctrl.details.total_objects}} - {{'max-size: '+$ctrl.maxSize}} -->
+<ul uib-pagination
+    total-items="$ctrl.totalItems"
+    ng-model="$ctrl.currentPage"
+    max-size="$ctrl.maxSize"
+    items-per-page="$ctrl.itemsPerPage"
+    ng-change="$ctrl.pageChanged()"
+    class="pagination-sm"
+    boundary-links="true"
+    rotate="false">
+</ul>
+<pre>Page: {{$ctrl.currentPage}} / {{$ctrl.numPages}}</pre>
