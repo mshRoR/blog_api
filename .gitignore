@@ -8,6 +8,8 @@ backend/log/*
 backend/tmp/*
 !backend/log/.keep
 !backend/tmp/.keep
+backend/config/local_env.yml
+backend/vendor/
 
 # Ignore Byebug command history file.
 backend/.byebug_history
