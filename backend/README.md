@@ -7,5 +7,4 @@
 * Update PostgreSQL DB `username` and `Password` in your local configuration file `backend/config/local_env.yml`
 * `bundle install`
 * `bundle exec rails db:setup`
-* `bundle exec rails db:seed`
 * `rails server`
