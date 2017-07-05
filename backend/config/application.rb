@@ -27,6 +27,12 @@ module Backend
     # Skip views, helpers and assets when generating a new resource.
     config.time_zone = 'Dhaka'
     config.active_record.default_timezone = :local
+    config.before_configuration do
+      env_file = File.join(Rails.root, 'config', 'local_env.yml')
+      YAML.load(File.open(env_file)).each do |key, value|
+        ENV[key.to_s] = value
+      end if File.exists?(env_file)
+    end
     config.generators do |g|
       g.orm :active_record, primary_key_type: :uuid
     end
