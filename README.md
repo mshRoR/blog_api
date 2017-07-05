@@ -1,4 +1,4 @@
-# [Sample Blog Post Application (Rails 5 API and AngularJS)]((#))#
+## Sample Blog Post Application `(Rails 5 API and AngularJS)` ##
 
 ### Backend (Rails API) setup ###
 > *Before follow those steps need to setup [Ruby on Rials](https://gorails.com/setup/ubuntu/16.04) framework to your local pc*
