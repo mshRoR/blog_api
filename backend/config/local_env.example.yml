@@ -1,0 +1,5 @@
+# Postgres Config
+POSTGRES_USER: 'root'
+POSTGRES_PASSWORD: '123456'
+POSTGRES_HOST: 'localhost'
+POSTGRES_DB: 'blog_dev'
