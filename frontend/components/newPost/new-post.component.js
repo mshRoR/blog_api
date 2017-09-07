@@ -18,7 +18,7 @@ angular.module('blogApp')
 
       function onSuccess(res){
         console.log(res);
-        self.post = '';
+        self.post = {};
       }
 
       function onError(err){

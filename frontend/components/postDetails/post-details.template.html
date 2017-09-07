@@ -1,6 +1,6 @@
 <div>
   <h4>{{$ctrl.post.title}}</h4>
-  <p>{{$ctrl.post.description}}</p>
+  <p ng-bind-html="$ctrl.post.description"></p>
   <button type="button" ui-sref="postUpdate({id: $ctrl.post.id})">Edit</button>
   <button type="button" name="homePage" ui-sref="home">Home</button>
 </div>

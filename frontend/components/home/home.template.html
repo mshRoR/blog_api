@@ -5,7 +5,7 @@
     <tr>
       <th>Id</th>
       <th>Title</th>
-      <th>Description</th>
+      <!--<th>Description</th>-->
       <th>Options</th>
     </tr>
   </thead>
@@ -13,7 +13,7 @@
     <tr ng-repeat="post in $ctrl.posts">
       <td>{{post.id}}</td>
       <td>{{post.title}}</td>
-      <td>{{post.description}}</td>
+      <!--<td>{{post.description}}</td>-->
       <td>
         <button type="button" class="btn btn-sm btn-info" ui-sref="postDetails({id: post.id})">Details</button>
         <button type="button" class="btn btn-sm btn-primary" ui-sref="postUpdate({id: post.id})">Edit</button>
