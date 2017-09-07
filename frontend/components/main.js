@@ -1,7 +1,8 @@
 angular.module('blogApp', [
     'ui.router',
     'ngAnimate',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'angularTrix'
   ])
   .config(function($stateProvider, $urlServiceProvider){
     $urlServiceProvider.rules.otherwise({ state: 'home' });

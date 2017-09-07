@@ -4,15 +4,22 @@
     <meta charset="utf-8">
     <title>Blog</title>
     <link href="contents/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="contents/trix.css">
     <link rel="stylesheet" href="contents/styles.css">
     <script src="contents/angular.min.js" charset="utf-8"></script>
     <script src="contents/angular-ui-router.min.js" charset="utf-8"></script>
     <script src="contents/angular-animate.min.js" charset="utf-8"></script>
     <script src="contents/ui-bootstrap-tpls-2.5.0.min.js" charset="utf-8"></script>
+    <script src="contents/trix.js" charset="utf-8"></script>
+    <script src="contents/angular-trix.min.js" charset="utf-8"></script>
   </head>
   <body>
-    <h1>Sample Blog Application</h1>
-    <ui-view></ui-view>
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-1">
+        <h1 class="text-center">Sample Blog Application</h1>
+        <ui-view></ui-view>
+      </div>
+    </div>
 
     <script src="components/main.js" charset="utf-8"></script>
     <script src="components/home/home.component.js" charset="utf-8"></script>
