@@ -12,7 +12,7 @@ angular.module('blogApp')
       $log.debug(self.posts[0].posts);
       $log.debug(self.posts[0].details);
 
-      pPagination(self, 10, self.posts[0], $log);
+      pPagination(self, 10, self.posts[0]);
     };
 
     self.pageChanged = function(){
@@ -53,9 +53,9 @@ angular.module('blogApp')
     // };
   }
 
-  function pPagination(self, itemsPerPage, pageData, $log){
-    $log.debug('pagination');
-    $log.debug(pageData.details.current_page);
+  function pPagination(self, itemsPerPage, pageData){
+    console.log('pagination');
+    console.log(pageData.details.current_page);
     // total_pages: 12, total_objects: 119, current_page: 1, prev_page: null, next_page: 2
     self.maxSize = 5;
     self.itemsPerPage = itemsPerPage != '' ? itemsPerPage : 10;
