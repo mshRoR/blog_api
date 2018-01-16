@@ -1,4 +1,7 @@
-angular.module('blogApp')
+(function(){
+  'use strict';
+
+  angular.module('blogApp')
   .component('postDetails', {
     bindings: { post: '<' },
     controller: PostDetailsController,
@@ -22,4 +25,5 @@ angular.module('blogApp')
     //   });
     // };
     // console.log($stateParams.id);
-  }
+  }  
+})();

@@ -1,4 +1,7 @@
-angular.module('blogApp')
+(function(){
+  'use strict';
+  
+  angular.module('blogApp')
   .component('modalComponent', {
     bindings: {
       resolve: '<',
@@ -33,4 +36,5 @@ angular.module('blogApp')
     self.cancel = function () {
       self.close();
     };
-  }
+  }  
+})();

@@ -1,4 +1,4 @@
-<button type="button" name="newPost" ui-sref="newPost">New Post</button>
+<button class="btn btn-sm btn-primary" name="newPost" ui-sref="newPost">New Post</button>
 <span>{{$ctrl.posts.length}}</span>
 <table>
   <thead>
@@ -15,9 +15,9 @@
       <td>{{post.title}}</td>
       <!--<td>{{post.description}}</td>-->
       <td>
-        <button type="button" class="btn btn-sm btn-info" ui-sref="postDetails({id: post.id})">Details</button>
-        <button type="button" class="btn btn-sm btn-primary" ui-sref="postUpdate({id: post.id})">Edit</button>
-        <button type="button" class="btn btn-sm btn-danger" ng-click="$ctrl.deletePost(post.id, post.title)">Delete</button>
+        <button class="btn btn-sm btn-info" ui-sref="postDetails({id: post.id})">Details</button>
+        <button class="btn btn-sm btn-primary" ui-sref="postUpdate({id: post.id})">Edit</button>
+        <button class="btn btn-sm btn-danger" ng-click="$ctrl.deletePost(post.id, post.title)">Delete</button>
       </td>
     </tr>
   </tbody>

@@ -1,4 +1,7 @@
-angular.module('blogApp')
+(function(){
+  'use strict';
+
+  angular.module('blogApp')
   .component('newPost', {
     controller: newPostController,
     templateUrl: 'components/newPost/new-post.template.html'
@@ -28,3 +31,4 @@ angular.module('blogApp')
       PostService.newPost(newPost).then(onSuccess, onError);
     };
   }
+})();

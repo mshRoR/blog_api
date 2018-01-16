@@ -1,4 +1,7 @@
-angular.module('blogApp')
+(function(){
+  'use strict';
+  
+  angular.module('blogApp')
   .component('home', {
     bindings: { posts: '<' },
     controller: HomeController,
@@ -65,3 +68,4 @@ angular.module('blogApp')
     self.numPages = pageData.details.total_pages;
     self.posts = pageData.posts;
   }
+})();

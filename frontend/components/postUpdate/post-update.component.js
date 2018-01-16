@@ -1,4 +1,7 @@
-angular.module('blogApp')
+(function(){
+  'use strict';
+
+  angular.module('blogApp')
   .component('postUpdate', {
     bindings: { post: '<' },
     controller: PostUpdateController,
@@ -32,4 +35,5 @@ angular.module('blogApp')
     // };
 
     console.log($stateParams);
-  }
+  }  
+})();

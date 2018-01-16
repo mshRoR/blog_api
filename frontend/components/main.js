@@ -1,4 +1,7 @@
-angular.module('blogApp', [
+(function(){
+  'use strict';
+
+  angular.module('blogApp', [
     'ui.router',
     'ngAnimate',
     'ui.bootstrap',
@@ -45,4 +48,5 @@ angular.module('blogApp', [
     $stateProvider.state(newPostState);
   });
 
-angular.module('blogApp').constant('RootUrl', 'http://localhost:3000');
+  angular.module('blogApp').constant('RootUrl', 'http://localhost:3000');  
+})();
