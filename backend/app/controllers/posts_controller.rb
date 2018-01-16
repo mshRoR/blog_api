@@ -1,5 +1,6 @@
+# app/controllers/posts_controller.rb
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :update, :destroy]
+  before_action :set_post, only: %i[show update destroy]
 
   # GET [posts/(page/:page/:limit)]
   def index

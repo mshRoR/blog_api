@@ -1,3 +1,4 @@
+# app/controllers/concerns/pagination_info.rb
 module PaginationInfo
   def get_page_details(objects)
     {
