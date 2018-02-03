@@ -5,4 +5,10 @@ Rails.application.routes.draw do
   end
 
   resources :posts, concerns: :paginatable
+  resources :authenticates, only: [] do
+    collection do
+      post 'login', to: 'authenticates#create'
+      delete 'sign-out', to: 'authenticates#destroy'
+    end
+  end
 end
