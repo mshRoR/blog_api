@@ -3,7 +3,7 @@ angular.module('blogApp')
 
   function PostService($http, RootUrl){
     // var urlBase = 'data/post.json';
-    var urlBase = RootUrl + '/posts/';
+    var urlBase = RootUrl + '/api/v1/posts/';
     var service = {
       getAllPost: function(pageNo, limit){
         return $http.get(urlBase+'page/'+pageNo+'/'+limit).then(function(resp){

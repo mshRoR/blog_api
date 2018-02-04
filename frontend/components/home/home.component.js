@@ -12,18 +12,18 @@
     var self = this;
 
     self.$onInit = function(){
-      $log.debug(self.posts[0].posts);
-      $log.debug(self.posts[0].details);
+      $log.debug(self.posts.posts);
+      $log.debug(self.posts.pagination);
 
-      pPagination(self, 10, self.posts[0]);
+      pPagination(self, 10, self.posts);
     };
 
     self.pageChanged = function(){
       $log.debug(self.currentPage);
       var limit = 10;
       PostService.getAllPost(this.currentPage, limit).then(function(res){
-        $log.debug(res[0].posts);
-        pPagination(self, limit, res[0]);
+        $log.debug(res);
+        pPagination(self, limit, res);
       });
     };
 
@@ -58,14 +58,14 @@
 
   function pPagination(self, itemsPerPage, pageData){
     console.log('pagination');
-    console.log(pageData.details.current_page);
+    console.log(pageData.pagination.current_page);
     // total_pages: 12, total_objects: 119, current_page: 1, prev_page: null, next_page: 2
     self.maxSize = 5;
-    self.itemsPerPage = itemsPerPage != '' ? itemsPerPage : 10;
+    self.itemsPerPage = itemsPerPage !== '' ? itemsPerPage : 10;
 
-    self.currentPage = pageData.details.current_page;
-    self.totalItems = pageData.details.total_objects;
-    self.numPages = pageData.details.total_pages;
+    self.currentPage = pageData.pagination.current_page;
+    self.totalItems = pageData.pagination.total_objects;
+    self.numPages = pageData.pagination.total_pages;
     self.posts = pageData.posts;
   }
 })();

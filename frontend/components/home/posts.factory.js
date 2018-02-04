@@ -3,7 +3,7 @@ angular.module('blogApp')
 
   function postsFactory($http){
     // var urlBase = 'data/post.json';
-    var urlBase = 'http://localhost:3000/posts';
+    var urlBase = 'http://localhost:3000/api/v1posts';
     var dataFactory = {};
 
     dataFactory.getPosts = function(){
