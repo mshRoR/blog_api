@@ -4,11 +4,16 @@ Rails.application.routes.draw do
     get '(page/:page/:limit)', action: :index, on: :collection, as: ''
   end
 
-  resources :posts, concerns: :paginatable
-  resources :authenticates, only: [] do
-    collection do
-      post 'login', to: 'authenticates#create'
-      delete 'sign-out', to: 'authenticates#destroy'
+  namespace :api, defaults: {format: :json} do
+    namespace :v1 do
+      resources :posts, concerns: :paginatable
+
+      resources :authenticates, only: [] do
+        collection do
+          post 'login', to: 'authenticates#create'
+          delete 'sign-out', to: 'authenticates#destroy'
+        end
+      end
     end
   end
 end

@@ -9,7 +9,7 @@
 class User < ApplicationRecord
   has_secure_password
   enum role: { admin: 1,
-               modarator: 2,
+               moderator: 2,
                general: 3 }
 
   validates :name, presence: true
@@ -22,4 +22,6 @@ class User < ApplicationRecord
   validates :password, presence: { on: :create },
                        length: { minimum: 8, allow_blank: true }
   validates :role, presence: true
+
+  has_many :posts, inverse_of: :user
 end

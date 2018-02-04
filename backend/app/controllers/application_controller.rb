@@ -3,7 +3,6 @@ class ApplicationController < ActionController::API
   before_action :authenticate_request
   attr_reader :current_user
   include JsonResponse
-  include PaginationInfo
 
   private
 
